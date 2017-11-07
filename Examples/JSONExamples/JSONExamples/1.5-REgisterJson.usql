@@ -1,0 +1,2 @@
+﻿USE DATABASE JSONBlog;
+CREATE ASSEMBLY [Newtonsoft.Json] FROM @"Assemblies/JSON/Newtonsoft.Json.dll";

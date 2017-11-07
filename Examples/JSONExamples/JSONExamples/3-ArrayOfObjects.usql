@@ -23,9 +23,10 @@ REFERENCE ASSEMBLY JSONBlog.[Newtonsoft.Json];
 REFERENCE ASSEMBLY JSONBlog.[Microsoft.Analytics.Samples.Formats]; 
 
 @data0 = 
-    EXTRACT field2 string
+    EXTRACT field1 string,
+            field2 string
     FROM @input
-    USING new Microsoft.Analytics.Samples.Formats.Json.JsonExtractor("[*]");
+    USING new Microsoft.Analytics.Samples.Formats.Json.JsonExtractor();
 
 OUTPUT @data0 TO "/output/json/objarray.csv" USING Outputters.Csv(escapeCharacter: '#');
 
